@@ -96,22 +96,40 @@
     position: relative;
     overflow: hidden;
     background: var(--green-light);
+    padding: 8px;
   }
-  .hero-photo img {
+  .photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 6px;
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+  }
+  .photo-cell {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #fff;
+  }
+  .photo-cell img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
     display: block;
   }
-  .hero-photo-caption {
+  .photo-portrait img { object-position: center 25%; }
+  .photo-cell-label {
     position: absolute;
     bottom: 0; left: 0; right: 0;
     background: rgba(46, 122, 36, 0.88);
-    padding: 0.75rem 1.25rem;
+    color: #fff;
+    font-size: 11px;
+    padding: 4px 8px;
+    text-align: center;
+    letter-spacing: 0.05em;
   }
-  .hero-photo-caption p { font-size: 12px; color: #fff; margin: 0; line-height: 1.6; }
-  .hero-photo-caption strong { font-size: 14px; font-weight: 500; }
 
   /* ── BANNER ── */
   .banner {
@@ -595,7 +613,8 @@
     .hero { grid-template-columns: 1fr; }
     .hero-text { padding: 2.5rem 1.5rem 2rem; }
     h1 { font-size: 26px; }
-    .hero-photo { height: 280px; }
+    .hero-photo { min-height: auto; padding: 6px; }
+    .photo-grid { min-height: 400px; }
     .banner { padding: 1rem 1.5rem; flex-wrap: wrap; }
     .yoyaku-wrap { padding: 1rem 1.5rem; }
     section { padding: 2.5rem 1.5rem; }
@@ -645,10 +664,20 @@
     </p>
   </div>
   <div class="hero-photo">
-    <!-- ★ここに写真をアップロード：width_800.png を使う -->
-    <img src="width_800.png" alt="代表 宮島篤子">
-    <div class="hero-photo-caption">
-      <p><strong>宮島篤子</strong>　代表理事 ／ 臨床心理士・公認心理師・看護師・4児の母</p>
+    <div class="photo-grid">
+      <div class="photo-cell photo-workshop">
+        <img src="workshop.jpg" alt="ワークショップの様子">
+      </div>
+      <div class="photo-cell photo-portrait">
+        <img src="width_800.png" alt="代表 宮島篤子">
+        <div class="photo-cell-label">代表　宮島篤子</div>
+      </div>
+      <div class="photo-cell photo-room">
+        <img src="room.jpg" alt="桜坂の相談室">
+      </div>
+      <div class="photo-cell photo-street">
+        <img src="street.jpg" alt="桜坂の街並み">
+      </div>
     </div>
   </div>
 </div>
