@@ -75,7 +75,6 @@
     letter-spacing: 0.18em;
     color: var(--green);
     font-weight: 500;
-    text-transform: uppercase;
     margin-bottom: 1.25rem;
   }
   h1 {
@@ -135,6 +134,30 @@
   }
   .banner-text { font-size: 13px; line-height: 1.7; color: var(--green-dark); }
   .banner-text strong { font-weight: 500; font-size: 15px; display: block; margin-bottom: 2px; }
+
+  /* ── 予約フォームバナー ── */
+  .yoyaku-wrap {
+    padding: 1.5rem 3rem;
+    text-align: center;
+    background: var(--white);
+  }
+  .yoyaku-wrap a {
+    display: inline-block;
+    max-width: 700px;
+    width: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .yoyaku-wrap a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(75,173,62,0.15);
+  }
+  .yoyaku-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
   /* ── SECTIONS ── */
   section { padding: 3rem 3rem; }
@@ -241,6 +264,300 @@
     padding-bottom: 1px;
   }
   .gohan-link:hover { color: var(--green-dark); }
+  .gohan-actions { display: flex; flex-direction: column; gap: 8px; margin-top: 0.5rem; }
+  .gohan-btn-line, .gohan-btn-ig {
+    display: block;
+    text-align: center;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .gohan-btn-line { background: #06C755; color: #fff; }
+  .gohan-btn-line:hover { background: #05a648; }
+  .gohan-btn-ig {
+    background: #fff;
+    color: #C13584;
+    border: 1px solid #C13584;
+  }
+  .gohan-btn-ig:hover { background: #C13584; color: #fff; }
+
+  /* ── JOIN / SUPPORT ── */
+  .join-intro { text-align: center; margin-bottom: 2rem; }
+  .join-intro h2 { margin-bottom: 0.75rem; }
+  .join-intro .about-text { max-width: 560px; margin: 0 auto; }
+
+  .join-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .join-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.75rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .join-card-member { border-top: 3px solid var(--green); }
+  .join-card-donate { border-top: 3px solid var(--yellow); background: var(--yellow-light); }
+  .join-card-follow { border-top: 3px solid var(--green-mid); }
+
+  .join-icon { font-size: 36px; margin-bottom: 0.5rem; }
+  .join-card-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+  }
+  .join-card-desc {
+    font-size: 13px;
+    color: var(--text-sub);
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    flex: 1;
+  }
+  .join-btn {
+    display: inline-block;
+    background: var(--green);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .join-btn:hover { background: var(--green-dark); }
+  .join-btn-syncable { background: var(--yellow-dark); }
+  .join-btn-syncable:hover { background: #3a3200; }
+
+  .join-sns { display: flex; flex-direction: column; gap: 8px; }
+  .sns-icon {
+    display: block;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .sns-ig { background: #fff; border: 1px solid #C13584; color: #C13584; }
+  .sns-ig:hover { background: #C13584; color: #fff; }
+  .sns-line { background: #fff; border: 1px solid #06C755; color: #06C755; }
+  .sns-line:hover { background: #06C755; color: #fff; }
+
+  /* ── NPO INFO ── */
+  .npo-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+  .npo-facts {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+  }
+  .npo-facts dl {
+    margin-bottom: 1.25rem;
+  }
+  .npo-facts dt {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--green);
+    font-weight: 500;
+    margin-bottom: 4px;
+    margin-top: 12px;
+  }
+  .npo-facts dt:first-child { margin-top: 0; }
+  .npo-facts dd {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--text);
+    margin-left: 0;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .npo-facts dd:last-of-type { border-bottom: none; }
+  .teikan-btn {
+    display: inline-block;
+    background: var(--white);
+    color: var(--green-dark);
+    border: 1px solid var(--green);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }
+  .teikan-btn:hover { background: var(--green); color: #fff; }
+  .doc-btns { display: flex; flex-direction: column; gap: 8px; margin-top: 0.5rem; }
+  .doc-btns .teikan-btn { display: block; text-align: center; }
+  .docs-label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--green);
+    font-weight: 500;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border);
+  }
+
+  /* ── NEXT EVENT ── */
+  #next-event { background: linear-gradient(180deg, var(--yellow-light) 0%, var(--white) 100%); }
+  .event-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+  .event-flyer img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+  .event-date-label {
+    display: inline-block;
+    background: var(--green);
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 0.75rem;
+  }
+  .event-date {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--green-dark);
+    line-height: 1.4;
+  }
+  .event-time {
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+  }
+  .event-details {
+    margin-bottom: 1.25rem;
+    padding: 1rem 1.25rem;
+    background: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  .event-details dt {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--green);
+    font-weight: 500;
+    margin-top: 8px;
+  }
+  .event-details dt:first-child { margin-top: 0; }
+  .event-details dd {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text);
+    margin-left: 0;
+    padding-bottom: 6px;
+  }
+  .event-btn-line {
+    display: block;
+    text-align: center;
+    background: #06C755;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  .event-btn-line:hover { background: #05a648; }
+  .event-note {
+    font-size: 11px;
+    color: var(--text-sub);
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  /* ── ACCESS ── */
+  .access-grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+  .access-address {
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text);
+    margin-bottom: 1rem;
+    padding: 1rem 1.25rem;
+    background: var(--green-light);
+    border-left: 3px solid var(--green);
+    border-radius: 4px;
+  }
+  .map-wrap {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+
+  /* ── CONTACT ── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  .contact-card {
+    background: var(--green-light);
+    border: 1px solid var(--green-mid);
+    border-radius: 12px;
+    padding: 1.75rem;
+    text-align: center;
+  }
+  .contact-label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--green-dark);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+  .contact-email {
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--green-dark);
+    margin-bottom: 1.25rem;
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .contact-btn-mail {
+    display: inline-block;
+    background: var(--green);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .contact-btn-mail:hover { background: var(--green-dark); }
+  .contact-note {
+    font-size: 11px;
+    color: var(--text-sub);
+    margin-top: 0.75rem;
+    line-height: 1.6;
+  }
 
   /* ── DIVIDER ── */
   hr { border: none; border-top: 1px solid var(--border); margin: 0 3rem; }
@@ -280,9 +597,16 @@
     h1 { font-size: 26px; }
     .hero-photo { height: 280px; }
     .banner { padding: 1rem 1.5rem; flex-wrap: wrap; }
+    .yoyaku-wrap { padding: 1rem 1.5rem; }
     section { padding: 2.5rem 1.5rem; }
     .cards { grid-template-columns: 1fr; gap: 12px; }
+    .join-cards { grid-template-columns: 1fr; gap: 12px; }
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .npo-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .event-wrap { grid-template-columns: 1fr; gap: 1.5rem; }
+    .event-date { font-size: 22px; }
+    .access-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .contact-grid { grid-template-columns: 1fr; gap: 1.5rem; }
     hr { margin: 0 1.5rem; }
     footer { padding: 1.5rem; flex-direction: column; gap: 1.25rem; align-items: flex-start; }
   }
@@ -304,15 +628,17 @@
   </a>
   <ul class="nav-links">
     <li><a href="#activities">活動紹介</a></li>
-    <li><a href="#gohan">ごはんとノート</a></li>
-    <li><a href="#contact">お問い合わせ</a></li>
+    <li><a href="#join">参加・応援</a></li>
+    <li><a href="#about-npo">法人情報</a></li>
+    <li><a href="#access">アクセス</a></li>
+    <li><a href="#contact-section">お問い合わせ</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
   <div class="hero-text">
-    <div class="eyebrow">NPO法人 Chou·chou — Fukuoka</div>
+    <div class="eyebrow">NPO法人 Chou·chou ／ Fukuoka</div>
     <h1>子どもと家族が、<br>孤立しない<em>地域へ。</em></h1>
     <p class="hero-sub">
       福岡市を拠点に、子育て家族への地域アウトリーチと<br>居場所づくりに取り組むNPO法人です。
@@ -331,10 +657,42 @@
 <div class="banner">
   <span class="badge">委託事業</span>
   <div class="banner-text">
-    <strong>福岡市 保育所等訪問支援事業</strong>
+    <strong>令和7年度 臨床心理士等による保育所等巡回支援事業</strong>
     福岡市より委託を受け、保育所・こども園への専門的巡回支援を実施しています。
   </div>
 </div>
+
+<!-- 予約フォームバナー -->
+<div class="yoyaku-wrap">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxzqCpgrM6MGiL-dSQhU_Tnv-BzuD9M2JpN5kAWHLAjRte7g/viewform" target="_blank" rel="noopener">
+    <img src="yoyaku_banner.png" alt="令和7年度 臨床心理士等による保育所等巡回支援 ご予約フォーム">
+  </a>
+</div>
+
+<!-- 次回開催のお知らせ -->
+<section id="next-event">
+  <div class="section-label">お知らせ ／ 次回開催</div>
+  <div class="event-wrap">
+    <div class="event-flyer">
+      <img src="gohan_flyer.png" alt="ごはんとノート 2026年8月1日 開催のご案内">
+    </div>
+    <div class="event-info">
+      <div class="event-date-label">初回開催</div>
+      <div class="event-date">2026年8月1日（土）</div>
+      <div class="event-time">10:00 〜 13:00（予定）</div>
+      <dl class="event-details">
+        <dt>会場</dt><dd>中央区桜坂</dd>
+        <dt>参加費</dt><dd>こども 200円 ／ 大人 600円</dd>
+        <dt>定員</dt><dd>10名（ご予約制）</dd>
+        <dt>内容</dt><dd>大学生ボランティアによる遊びと学習のサポート／臨床心理士による相談OK</dd>
+      </dl>
+      <a class="event-btn-line" href="https://lin.ee/6lz4s2F" target="_blank" rel="noopener">
+        💬 公式LINEで「ごはん」と送って予約
+      </a>
+      <p class="event-note">※ 開催日程は決定次第 Instagramでもお知らせします。</p>
+    </div>
+  </div>
+</section>
 
 <!-- 活動内容 -->
 <section id="activities">
@@ -342,8 +700,8 @@
   <div class="cards">
     <div class="card">
       <div class="card-icon">🏫</div>
-      <div class="card-title">保育所巡回支援</div>
-      <p class="card-desc">福岡市委託事業。保育現場へ専門家が訪問し、子どもと保育者をともに支援します。</p>
+      <div class="card-title">保育所等巡回支援</div>
+      <p class="card-desc">令和7年度 福岡市委託事業。臨床心理士等が保育現場を訪問し、子どもと保育者をともに支援します。</p>
     </div>
     <div class="card" id="gohan">
       <div class="card-icon">🍚</div>
@@ -351,9 +709,9 @@
       <p class="card-desc">子どもの居場所・食事・学習支援のコミュニティ事業。一緒にご飯を食べて、学びます。</p>
     </div>
     <div class="card">
-      <div class="card-icon">🤝</div>
-      <div class="card-title">子育て家族アウトリーチ</div>
-      <p class="card-desc">孤立しがちな子育て家族に、地域からつながりを届けます。</p>
+      <div class="card-icon">🎓</div>
+      <div class="card-title">研修・講座 ／ 他団体との連携</div>
+      <p class="card-desc">保育・子育て支援に関わる方への研修や講座、他団体との協働プロジェクトを行っています。</p>
     </div>
   </div>
 </section>
@@ -372,14 +730,173 @@
       <p class="about-text">
         4人の子を育てながら、臨床心理士・公認心理師・看護師として福岡の地域に根ざして活動しています。
       </p>
-      <div class="tagline">関係が整うと、人生は動き出す。</div>
+      <div class="tagline">ひとりで抱えない。地域で支える。</div>
     </div>
     <div class="gohan-card">
-      <div class="gohan-card-title">🍚 ごはんとノート 再始動</div>
+      <div class="gohan-card-title">🍚 ごはんとノート</div>
       <p class="gohan-card-body">
-        2025年8月1日より再スタート。子どもたちの「食べる・学ぶ・つながる」を地域で支える取り組みです。クラウドファンディング実施中。
+        2026年8月1日より再スタート。子どもたちの「食べる・学ぶ・つながる」を地域で支える取り組みです。
       </p>
-      <a class="gohan-link" href="https://syncable.biz/" target="_blank">→ 詳しく見る・応援する</a>
+      <div class="gohan-actions">
+        <a class="gohan-btn-line" href="https://lin.ee/6lz4s2F" target="_blank" rel="noopener">
+          💬 公式LINEから予約する
+        </a>
+        <a class="gohan-btn-ig" href="https://www.instagram.com/chou.chou.fuk/" target="_blank" rel="noopener">
+          📷 Instagramで見る
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- 参加・応援 -->
+<section id="join">
+  <div class="section-label">参加・応援</div>
+  <div class="join-intro">
+    <h2>Chou·chouと、いっしょに。</h2>
+    <p class="about-text">
+      NPO法人Chou·chouは、会員のみなさま・寄付者のみなさまに支えられて活動しています。<br>
+      関わり方は、あなたに合った形で選んでいただけます。
+    </p>
+  </div>
+
+  <div class="join-cards">
+    <div class="join-card join-card-member">
+      <div class="join-icon">🤝</div>
+      <div class="join-card-title">正会員になる</div>
+      <p class="join-card-desc">
+        Chou·chouの目的に賛同し、活動を推進する仲間になっていただく制度です。総会での議決権があり、法人運営に参画いただけます。
+      </p>
+      <a class="join-btn" href="mailto:chou.chou.fuk@gmail.com?subject=正会員入会について">
+        メールで問い合わせる
+      </a>
+    </div>
+
+    <div class="join-card join-card-donate">
+      <div class="join-icon">💛</div>
+      <div class="join-card-title">寄付で応援する</div>
+      <p class="join-card-desc">
+        「ごはんとノート」をはじめとする活動を、寄付で支えていただけます。Syncableから、1回・毎月いずれの形でもご支援いただけます。
+      </p>
+      <a class="join-btn join-btn-syncable" href="https://syncable.biz/campaign/9782" target="_blank" rel="noopener">
+        Syncableで寄付する →
+      </a>
+    </div>
+
+    <div class="join-card join-card-follow">
+      <div class="join-icon">📣</div>
+      <div class="join-card-title">SNSでつながる</div>
+      <p class="join-card-desc">
+        日々の活動やイベント情報を発信しています。フォロー・シェアも、大きな応援になります。
+      </p>
+      <div class="join-sns">
+        <a href="https://www.instagram.com/chou.chou.fuk/" target="_blank" rel="noopener" class="sns-icon sns-ig" aria-label="Instagram">📷 Instagram</a>
+        <a href="https://lin.ee/6lz4s2F" target="_blank" rel="noopener" class="sns-icon sns-line" aria-label="LINE">💬 公式LINE</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- 法人情報 -->
+<section id="about-npo">
+  <div class="section-label">法人情報</div>
+  <div class="npo-grid">
+    <div>
+      <h2>NPO法人 Chou·chou（シュシュ）</h2>
+      <p class="about-text">
+        妊娠前から産後、子どもや若者、子育て世代、そして子どもの育成に関わるすべての方々を支援します。「何度でも転んでよい」精神を大切に、保護者の孤立を防ぎ、社会全体で障壁を取り払いながら、子どもの育ちを守る社会の実現をめざします。
+      </p>
+      <p class="about-text">
+        特に、発達障がいのある児童やグレーゾーンと呼ばれる子どもたちへの支援を中核に置いています。
+      </p>
+    </div>
+    <div class="npo-facts">
+      <dl>
+        <dt>法人名</dt>
+        <dd>NPO法人 Chou·chou（シュシュ）</dd>
+        <dt>設立</dt>
+        <dd>2023年9月20日</dd>
+        <dt>所在地</dt>
+        <dd>福岡市中央区桜坂1丁目6-33-305</dd>
+        <dt>代表理事</dt>
+        <dd>宮島 篤子</dd>
+        <dt>主な事業</dt>
+        <dd>相談支援／アウトリーチ／研修・講座／他団体との連携／子育て支援</dd>
+      </dl>
+      <div class="docs-label">法人情報書類</div>
+      <div class="doc-btns">
+        <a class="teikan-btn" href="teikan.pdf" target="_blank" rel="noopener">
+          📄 定款（PDF）
+        </a>
+        <a class="teikan-btn" href="shushi.pdf" target="_blank" rel="noopener">
+          📝 設立趣旨書（PDF）
+        </a>
+        <a class="teikan-btn" href="yakuin.pdf" target="_blank" rel="noopener">
+          👥 役員名簿（PDF）
+        </a>
+        <a class="teikan-btn" href="kessan_2025.pdf" target="_blank" rel="noopener">
+          📊 令和7年度 決算報告書（PDF）
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- アクセス -->
+<section id="access">
+  <div class="section-label">アクセス</div>
+  <div class="access-grid">
+    <div>
+      <h2>事務所所在地</h2>
+      <p class="access-address">
+        〒810-0024<br>
+        福岡県福岡市中央区桜坂1丁目6-33-305
+      </p>
+      <p class="about-text">
+        地下鉄七隈線「桜坂駅」より徒歩圏内。<br>
+        お車の場合は近隣のコインパーキングをご利用ください。
+      </p>
+    </div>
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps?q=%E7%A6%8F%E5%B2%A1%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E6%A1%9C%E5%9D%821%E4%B8%81%E7%9B%AE6-33&output=embed"
+        width="100%"
+        height="280"
+        style="border:0; border-radius:12px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- お問い合わせ -->
+<section id="contact-section">
+  <div class="section-label">お問い合わせ</div>
+  <div class="contact-grid">
+    <div>
+      <h2>お気軽にご連絡ください</h2>
+      <p class="about-text">
+        委託事業・研修・講座のご依頼、他団体との連携のご相談、ごはんとノートへのお問い合わせなど、下記メールアドレスまでご連絡ください。<br>
+        通常3営業日以内にご返信いたします。
+      </p>
+    </div>
+    <div class="contact-card">
+      <div class="contact-label">メールアドレス</div>
+      <a class="contact-email" href="mailto:chou.chou.fuk@gmail.com">chou.chou.fuk@gmail.com</a>
+      <a class="contact-btn-mail" href="mailto:chou.chou.fuk@gmail.com">
+        ✉ メールで問い合わせる
+      </a>
+      <p class="contact-note">※ ご返信までに3営業日ほどいただいております。</p>
     </div>
   </div>
 </section>
@@ -390,7 +907,7 @@
 <footer id="contact">
   <div>
     <div class="footer-logo">NPO法人 Chou·chou（シュシュ）</div>
-    <div class="footer-sub">福岡市 ／ chou.chou.fuk@gmail.com</div>
+    <div class="footer-sub">〒810-0024 福岡市中央区桜坂1丁目6-33-305 ／ chou.chou.fuk@gmail.com</div>
   </div>
   <a class="contact-btn" href="mailto:chou.chou.fuk@gmail.com">お問い合わせ</a>
 </footer>
